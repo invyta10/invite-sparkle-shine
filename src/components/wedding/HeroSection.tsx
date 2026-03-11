@@ -102,31 +102,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Couple silhouette walking animation */}
-      <motion.div
-        className="absolute bottom-8 left-0 right-0 flex justify-center pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={loaded ? { opacity: 0.15 } : {}}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <motion.div
-          className="flex items-end gap-1"
-          animate={{ x: [-100, 0, 100] }}
-          transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-        >
-          {/* Stylized walking couple silhouette via SVG */}
-          <svg width="60" height="80" viewBox="0 0 60 80" className="fill-cream">
-            {/* Person 1 */}
-            <circle cx="18" cy="8" r="6" />
-            <path d="M12 16 h12 l2 24 h-4 l-2 20 h-4 l2-20 h-2 l2 20 h-4 l-2-20 h-4z" />
-            {/* Person 2 */}
-            <circle cx="42" cy="6" r="5.5" />
-            <path d="M36 14 h12 l1 20 h-3 l-1 18 h-4 l1-18 h-2 l1 22 h-4 l-1-22 h-3z" />
-            {/* Holding hands */}
-            <rect x="24" y="22" width="12" height="2" rx="1" />
-          </svg>
-        </motion.div>
-      </motion.div>
     </section>
   );
 };
